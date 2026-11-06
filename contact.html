@@ -630,6 +630,18 @@ html.lang-ar .lab,html.lang-ar .idx,html.lang-ar .k,html.lang-ar .hc .no,html.la
   .hc p{font-size:clamp(.85rem,1.8vh,.98rem);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
   .hz-progress{margin-top:clamp(14px,2.4vh,28px)}
 }
+.nums{padding-bottom:clamp(32px,4vw,64px)!important}
+@media (min-width:901px){.hz{justify-content:flex-start;padding-top:calc(88px + env(safe-area-inset-top,0px))!important}}
+/* tighter, safer heading leading */
+h2,h3{line-height:1}
+html.lang-ar h2,html.lang-ar h3{line-height:1.2}
+/* results slider: no dead space, controls aligned to heading */
+.cs-top{align-items:flex-end}
+.cs-stage{min-height:0;margin-top:clamp(28px,3.5vw,48px);align-items:end}
+.cs-metric{line-height:.82}
+.cs-bar{margin-top:clamp(24px,3vw,40px)}
+.cs.sec{padding-block:clamp(80px,9vw,140px)}
+.hz-head,.price-head,.head2,.cs-top{align-items:flex-end}
 @media (max-width:900px){#ctg{grid-template-columns:1fr!important}}</style></head><body><div class="grain" aria-hidden="true"></div><div class="cursor" aria-hidden="true"></div>
 <header class="hdr"><div class="hdr-bg"></div><div class="w hdr-in">
   <a class="logo" href="index.html" aria-label="Admattic home"><img src="brand/admattic-red.png" alt="Admattic" width="160" height="21"></a>
