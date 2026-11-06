@@ -916,7 +916,7 @@ const cio=new IntersectionObserver(es=>es.forEach(e=>{ if(!e.isIntersecting) ret
 $$("[data-count]").forEach(el=>cio.observe(el));
 
 /* ---------------- beyond rings ---------------- */
-const steps=$$(".by-step"), rings=$$(".ring:not(.r0)");
+const steps=$$(".by-step"), rings=[".r1",".r2",".r3",".r4"].map(s=>$(".ring"+s)).filter(Boolean);
 if(steps.length){ const set=i=>{ steps.forEach((s,j)=>s.classList.toggle("on",j===i)); rings.forEach((r,j)=>r.classList.toggle("on",j<=i-1)); };
   set(0); const sio=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) set(steps.indexOf(e.target)); }),{rootMargin:"-45% 0px -45% 0px"}); steps.forEach(s=>sio.observe(s));
   if(G&&!reduce) G.from(rings,{scale:.6,opacity:0,duration:1.2,ease:"expo.out",stagger:.12,scrollTrigger:{trigger:".by-stage",start:"top 75%"}});
